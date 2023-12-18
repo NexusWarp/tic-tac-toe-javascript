@@ -38,19 +38,75 @@ document.querySelector("#nine").addEventListener("click", function clicked(){
     document.querySelector("#nine").removeEventListener("click",clicked)
 })
 
-
+let someoneWon = false;
 
 function getClick(per){
+   if(someoneWon==false){
+    let select = document.querySelector(per)
     if(xTurn==true){
-        document.querySelector(per).innerHTML="X"
+        select.innerHTML="X"
         xTurn=false;
         document.querySelector(".text").innerHTML="Player 2 Turn!"
        }
        else{
-         document.querySelector(per).innerHTML="O"
+         select.innerHTML="O"
          xTurn=true;
          document.querySelector(".text").innerHTML="Player 1 Turn!"
-       }   
+       }
+   }
+    if( (document.querySelector(".x1").textContent=="X") && (document.querySelector(".x2").textContent=="X") && (document.querySelector(".x3").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x4").textContent=="X") && (document.querySelector(".x5").textContent=="X") && (document.querySelector(".x6").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x7").textContent=="X") && (document.querySelector(".x8").textContent=="X") && (document.querySelector(".x9").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x1").textContent=="X") && (document.querySelector(".x4").textContent=="X") && (document.querySelector(".x7").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x2").textContent=="X") && (document.querySelector(".x5").textContent=="X") && (document.querySelector(".x8").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x3").textContent=="X") && (document.querySelector(".x6").textContent=="X") && (document.querySelector(".x9").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x1").textContent=="X") && (document.querySelector(".x5").textContent=="X") && (document.querySelector(".x9").textContent=="X")){
+        checkCondition("1");
+    }
+    if( (document.querySelector(".x3").textContent=="X") && (document.querySelector(".x5").textContent=="X") && (document.querySelector(".x7").textContent=="X")){
+        checkCondition("1");
+    }
+    
+    if( (document.querySelector(".x1").textContent=="O") && (document.querySelector(".x2").textContent=="O") && (document.querySelector(".x3").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x4").textContent=="O") && (document.querySelector(".x5").textContent=="O") && (document.querySelector(".x6").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x7").textContent=="O") && (document.querySelector(".x8").textContent=="O") && (document.querySelector(".x9").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x1").textContent=="O") && (document.querySelector(".x4").textContent=="O") && (document.querySelector(".x7").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x2").textContent=="O") && (document.querySelector(".x5").textContent=="O") && (document.querySelector(".x8").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x3").textContent=="O") && (document.querySelector(".x6").textContent=="O") && (document.querySelector(".x9").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x1").textContent=="O") && (document.querySelector(".x5").textContent=="O") && (document.querySelector(".x9").textContent=="O")){
+        checkCondition("2");
+    }
+    if( (document.querySelector(".x3").textContent=="O") && (document.querySelector(".x5").textContent=="O") && (document.querySelector(".x7").textContent=="O")){
+        checkCondition("2");
+    }
+} 
+"1"
+function checkCondition(player){
+    document.querySelector(".text").innerHTML=`Player ${player} Won!!!`;
+    someoneWon=true;
 }
-
 document.querySelector(".text").innerHTML="Player 1 Turn!"
