@@ -5,10 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
 .gbox{
     width: 400px;
     height: 400px;
-    background-color: rgb(219, 243, 170);
+    background-color: burlywood;
     display: grid;
     grid-template-columns: 130px 130px 130px;
     gap:5px ;
@@ -16,5 +17,15 @@
 .inner{
     width: 130px;
     height: 130px;
-    background-color: beige;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.x{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 6rem;
+    color: burlywood;
+  
+    /* visibility: hidden; */
 }
