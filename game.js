@@ -44,9 +44,13 @@ function getClick(per){
     if(xTurn==true){
         document.querySelector(per).innerHTML="X"
         xTurn=false;
+        document.querySelector(".text").innerHTML="Player 2 Turn!"
        }
        else{
          document.querySelector(per).innerHTML="O"
          xTurn=true;
+         document.querySelector(".text").innerHTML="Player 1 Turn!"
        }   
 }
+
+document.querySelector(".text").innerHTML="Player 1 Turn!"
