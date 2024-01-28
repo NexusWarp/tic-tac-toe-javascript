@@ -1,1 +1,1 @@
-Tic Tac Tow Game in Javascript.
+Tic Tac Tow Game using Javascript.
